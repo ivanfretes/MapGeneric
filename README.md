@@ -1,7 +1,7 @@
 # MapGeneric
 Is a micro library that abstract to the maps providers
 
-Requisitos:
+Requires:
 * Api Key Map Provider
 * Include de map-generic.js in your html
 
