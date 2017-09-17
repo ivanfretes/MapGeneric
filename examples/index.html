@@ -26,7 +26,46 @@
 	
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO37nRdl-f-N0VNO2bd5-xEtAS_6ruWQ0"></script>
 	
-	
 	<script src="../js/map-generic.js"></script>
+	<script>
+		// Creamos un nuevo Mapa Generico del tipo Google Maps
+
+		var googleMap = new MapGeneric.Map(
+			'google', 
+			document.getElementById('google-map'), 
+			{
+				lat: -25.287724, 
+				lng: -57.607870
+			}, 
+			'ROADMAP'
+		);
+		googleMap.initialize();
+
+		// Creamos un nuevo Mapa Generico del tipo Leaflet
+		var leaflet = new MapGeneric.Map(
+			'leaflet', 
+			document.getElementById('leaflet-map'), 
+			{
+				lat: -25.287724, 
+				lng: -57.607870
+			}, 
+			//'ROADMAP'
+		);
+		leaflet.initialize();
+
+
+		// Creamos un nuevo Mapa Generico del tipo Leaflet
+		var openlayer = new MapGeneric.Map(
+			'openlayer', 
+			document.getElementById('openlayer-map'), 
+			{
+				lat: -25.287724, 
+				lng: -57.607870
+			}, 
+			//'ROADMAP'
+		);
+		openlayer.initialize();
+
+	</script>
 </body>
 </html>

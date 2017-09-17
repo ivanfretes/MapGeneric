@@ -106,45 +106,6 @@ MapGeneric.OpenLayerMap = function(){
 	}
 }
 
-// Creamos un nuevo Mapa Generico del tipo Google Maps
-
-var googleMap = new MapGeneric.Map(
-	'google', 
-	document.getElementById('google-map'), 
-	{
-		lat: -25.287724, 
-		lng: -57.607870
-	}, 
-	'ROADMAP'
-);
-googleMap.initialize();
-
-// Creamos un nuevo Mapa Generico del tipo Leaflet
-var leaflet = new MapGeneric.Map(
-	'leaflet', 
-	document.getElementById('leaflet-map'), 
-	{
-		lat: -25.287724, 
-		lng: -57.607870
-	}, 
-	//'ROADMAP'
-);
-leaflet.initialize();
-
-
-// Creamos un nuevo Mapa Generico del tipo Leaflet
-var openlayer = new MapGeneric.Map(
-	'openlayer', 
-	document.getElementById('openlayer-map'), 
-	{
-		lat: -25.287724, 
-		lng: -57.607870
-	}, 
-	//'ROADMAP'
-);
-openlayer.initialize();
-
-
 
 
 
