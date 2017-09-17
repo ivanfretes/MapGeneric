@@ -18,11 +18,22 @@
 			width: 300px;
 			height:200px;
 		}
+		
+		#openlayer-map {
+			margin-top: 10px;
+			background: #555;
+			width: 300px;
+			height:200px;
+		}
 	
 	</style>
 	
+	<!-- OpenLayers	-->
+	<link rel="stylesheet" href="https://openlayers.org/en/v4.3.3/css/ol.css" type="text/css">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.3.3/build/ol.js"></script>
 	
-
+	<!--  Leaflet	-->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
    		  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
    		  crossorigin=""/>
@@ -34,6 +45,7 @@
 <body>
 	<div id="google-map"></div>
 	<div id="leaflet-map"></div>
+	<div id="openlayer-map"></div>
 	
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO37nRdl-f-N0VNO2bd5-xEtAS_6ruWQ0"></script>
 	

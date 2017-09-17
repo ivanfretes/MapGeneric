@@ -9,7 +9,8 @@ MapGeneric.Map = function(provider, domSelector, coodInit, ground){
 		'google' : MapGeneric.GoogleMap,
 		'here' : MapGeneric.HereMap,
 		'osm' : MapGeneric.OSM,
-		'leaflet' : MapGeneric.LeafletMap
+		'leaflet' : MapGeneric.LeafletMap,
+		'openlayer' : MapGeneric.OpenLayerMap
 		
 	}; 
 
@@ -73,7 +74,35 @@ MapGeneric.LeafletMap = function(){
 	});
 
 	this.init = function(){
-		var map = L.map('leaflet-map').setView([51.505, -0.09], 13);
+		var map = L.map('leaflet-map').setView(coordInit, 13);
+	}
+}
+
+MapGeneric.OpenLayerMap = function(){
+	var coordTmp = this.mapBasicConfig.coodInit;
+	
+	var coordInit = Object.keys(coordTmp).map(function(pointName){ 
+		return coordTmp[pointName]; 
+	});
+	
+	
+	this.viewConfig = new ol.View({
+    	center: coordInit,
+        zoom: 16
+    });
+
+    
+
+	this.init = function(){
+		this.map = new ol.Map({
+			layers: [
+			  new ol.layer.Tile({
+				source: new ol.source.OSM()
+			  })
+			],
+			target: 'openlayer-map',
+			view: this.viewConfig
+		});
 	}
 }
 
@@ -101,6 +130,19 @@ var leaflet = new MapGeneric.Map(
 	//'ROADMAP'
 );
 leaflet.initialize();
+
+
+// Creamos un nuevo Mapa Generico del tipo Leaflet
+var openlayer = new MapGeneric.Map(
+	'openlayer', 
+	document.getElementById('leaflet-map'), 
+	{
+		lat: -25.287724, 
+		lng: -57.607870
+	}, 
+	//'ROADMAP'
+);
+openlayer.initialize();
 
 
 
