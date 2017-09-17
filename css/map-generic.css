@@ -1,0 +1,19 @@
+#google-map {
+	background: #000;
+	width: 300px;
+	height:200px;
+}
+
+#leaflet-map {
+	margin-top: 10px;
+	background: #444;
+	width: 300px;
+	height:200px;
+}
+
+#openlayer-map {
+	margin-top: 10px;
+	background: #555;
+	width: 300px;
+	height:200px;
+}

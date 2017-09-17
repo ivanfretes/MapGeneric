@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet with MapGeneric</title>
+
+	<link rel="stylesheet" href="../css/map-generic.css" />
+	
+	<!-- Google Maps	-->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO37nRdl-f-N0VNO2bd5-xEtAS_6ruWQ0"></script>
+	
+	
+</head>
+<body>
+	<div id="google-map"></div>
+	<script src="../js/map-generic.js"></script>
+	<script>
+		var googleMap = new MapGeneric.Map(
+			'google', 
+			document.getElementById('google-map'), 
+			{
+				lat: -25.287724, 
+				lng: -57.607870
+			}, 
+			'ROADMAP'
+		);
+		googleMap.initialize();
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet with MapGeneric</title>
+
+	<link rel="stylesheet" href="../css/map-generic.css" />
+	
+	<!-- OpenLayers	-->
+	<link rel="stylesheet" href="https://openlayers.org/en/v4.3.3/css/ol.css" type="text/css">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.3.3/build/ol.js"></script>
+	
+</head>
+<body>
+	<div id="openlayer-map"></div>
+	<script src="../js/map-generic.js"></script>
+	<script>
+		var openlayer = new MapGeneric.Map(
+			'openlayer', 
+			document.getElementById('openlayer-map'), 
+			{
+				lat: -25.287724, 
+				lng: -57.607870
+			}, 
+			//'ROADMAP'
+		);
+		openlayer.initialize();
+	</script>
+</body>
+</html>

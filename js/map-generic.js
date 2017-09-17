@@ -135,7 +135,7 @@ leaflet.initialize();
 // Creamos un nuevo Mapa Generico del tipo Leaflet
 var openlayer = new MapGeneric.Map(
 	'openlayer', 
-	document.getElementById('leaflet-map'), 
+	document.getElementById('openlayer-map'), 
 	{
 		lat: -25.287724, 
 		lng: -57.607870
