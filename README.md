@@ -5,7 +5,8 @@ Requisitos:
 * Api Key Map Provider
 * Include de map-generic.js in your html
 
-## Examples
+## Test
+<img src="images/providers.png">
 
 ### Leaflet
     var leaflet = new MapGeneric.Map(
